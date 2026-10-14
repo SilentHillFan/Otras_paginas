@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 5px 0 0 0;
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #000000;
+  margin-top: 0;
+}
+
+.ayuda {
+  font-size: 14px;
+  color: #000000;
+}
+
+.formulario-pesos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.campo input {
+  padding: 6px;
+  border: 1px solid #000000;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.suma-pesos {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.campo-checkbox {
+  margin-top: 12px;
+}
+
+.campo-checkbox label {
+  margin-left: 6px;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #000000;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+tbody tr {
+  background-color: #ffffff;
+}
+
+.opciones-metodo {
+  margin-top: 12px;
+}
+
+.opcion-metodo {
+  margin-top: 6px;
+}
+
+.opcion-metodo label {
+  margin-left: 6px;
+}
+
+.titulo-metodo {
+  margin: 20px 0 0 0;
+  font-size: 18px;
+}
+
+.titulo-metodo:first-child {
+  margin-top: 0;
+}
+
+.seccion-equipo, .seccion-datos, .seccion-dashboard, .seccion-prediccion, .seccion-procedimiento {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.integrante-card {
+  border: 1px solid #000000;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.botones-datos {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.boton-secundario {
+  margin-top: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.boton-secundario:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#tabla-datos input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #000000;
+  font-size: 14px;
+  text-align: center;
+}
+
+.boton-eliminar-fila {
+  margin-top: 0;
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.kpi-card {
+  border: 1px solid #000000;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kpi-etiqueta {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-valor {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.kpi-chico {
+  font-size: 16px;
+}
+
+.graficas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.grafica-grande {
+  grid-column: span 2;
+}
+
+.grafica-contenedor {
+  border: 1px solid #000000;
+  padding: 12px;
+}
+
+.grafica-contenedor h3 {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+}
+
+.grafica-contenedor canvas {
+  max-height: 320px;
+}
+
+.estadisticas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.estadistica-bloque {
+  border: 1px solid #000000;
+  padding: 14px;
+}
+
+.estadistica-bloque h3 {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.estadistica-bloque p {
+  margin: 6px 0;
+}
+
+.formulario-prediccion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.formulario-prediccion input {
+  padding: 8px;
+  border: 1px solid #000000;
+  font-size: 14px;
+  width: 140px;
+}
+
+.formulario-prediccion button {
+  margin-top: 0;
+}
+
+.resultado-prediccion {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.bloque-procedimiento {
+  margin-top: 18px;
+}
+
+.bloque-procedimiento:first-child {
+  margin-top: 0;
+}
+
+.bloque-procedimiento h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.formula-procedimiento {
+  font-family: "Courier New", monospace;
+  background-color: #f2f2f2;
+  border: 1px solid #000000;
+  padding: 8px 10px;
+  margin: 6px 0;
+  display: block;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .graficas-grid, .estadisticas-grid {
+    grid-template-columns: 1fr;
+  }
+  .grafica-grande {
+    grid-column: span 1;
+  }
+}

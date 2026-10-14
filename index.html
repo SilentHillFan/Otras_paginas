@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Regresion lineal (Minimos Cuadrados)</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Dashboard de Regresion Lineal</h1>
+    <p>Tarea 8. Metodo de Minimos Cuadrados (MC) - Unidad 3</p>
+  </header>
+
+  <main>
+
+    <section class="seccion-equipo">
+      <h2>Integrantes del equipo</h2>
+      <p class="ayuda">Equipo 6 - Sistemas de Apoyo a la Decision - Grupo 401 - Profesora Rocio Jacqueline Becerra Urquidez</p>
+      <div class="equipo-grid">
+        <div class="integrante-card">Ayala Zavala Humberto</div>
+        <div class="integrante-card">Baldenebro Quiroz Luis Mario</div>
+        <div class="integrante-card">Cruz Galaviz Luis Angel</div>
+      </div>
+    </section>
+
+    <section class="seccion-datos">
+      <h2>1. Datos (x, y)</h2>
+      <p class="ayuda">Por default se cargan los datos de la practica 7 (horas jugadas por semana vs nivel alcanzado). Puedes editarlos o agregar mas filas.</p>
+
+      <div class="tabla-contenedor">
+        <table id="tabla-datos">
+          <thead>
+            <tr><th>#</th><th>x</th><th>y</th><th></th></tr>
+          </thead>
+          <tbody id="cuerpo-tabla-datos"></tbody>
+        </table>
+      </div>
+
+      <div class="botones-datos">
+        <button id="boton-agregar-fila" class="boton-secundario">Agregar fila</button>
+        <button id="boton-calcular">Calcular modelo</button>
+      </div>
+    </section>
+
+    <section class="seccion-dashboard">
+      <h2>2. Dashboard</h2>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-etiqueta">n (datos)</span>
+          <span class="kpi-valor" id="kpi-n">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-etiqueta">Modelo</span>
+          <span class="kpi-valor kpi-chico" id="kpi-modelo">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-etiqueta">R2</span>
+          <span class="kpi-valor" id="kpi-r2">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-etiqueta">RMSE</span>
+          <span class="kpi-valor" id="kpi-rmse">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-etiqueta">MAE</span>
+          <span class="kpi-valor" id="kpi-mae">-</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-etiqueta">MAPE</span>
+          <span class="kpi-valor" id="kpi-mape">-</span>
+        </div>
+      </div>
+
+      <div class="graficas-grid">
+        <div class="grafica-contenedor grafica-grande">
+          <h3>Dispersion, linea de tendencia y prediccion</h3>
+          <canvas id="grafica-modelo"></canvas>
+        </div>
+        <div class="grafica-contenedor">
+          <h3>Datos de x</h3>
+          <canvas id="grafica-x"></canvas>
+        </div>
+        <div class="grafica-contenedor">
+          <h3>Datos de y</h3>
+          <canvas id="grafica-y"></canvas>
+        </div>
+      </div>
+
+      <div class="estadisticas-grid">
+        <div class="estadistica-bloque">
+          <h3>Estadisticas de x</h3>
+          <p>Media: <span id="est-x-media">-</span></p>
+          <p>Desviacion estandar: <span id="est-x-de">-</span></p>
+          <p>Varianza: <span id="est-x-var">-</span></p>
+        </div>
+        <div class="estadistica-bloque">
+          <h3>Estadisticas de y</h3>
+          <p>Media: <span id="est-y-media">-</span></p>
+          <p>Desviacion estandar: <span id="est-y-de">-</span></p>
+          <p>Varianza: <span id="est-y-var">-</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-prediccion">
+      <h2>3. Prediccion</h2>
+      <p class="ayuda">Captura un valor de x en el modelo para obtener la prediccion de y. El punto se agrega en la grafica de arriba.</p>
+      <div class="formulario-prediccion">
+        <label for="input-x-prediccion">Valor de x</label>
+        <input type="number" id="input-x-prediccion" step="any">
+        <button id="boton-predecir">Predecir</button>
+      </div>
+      <p class="resultado-prediccion" id="resultado-prediccion"></p>
+    </section>
+
+    <section class="seccion-procedimiento">
+      <h2>4. Procedimiento de los calculos</h2>
+      <p class="ayuda">Desarrollo completo del modelo de regresion y de las metricas de evaluacion, en una seccion aparte para no saturar el dashboard.</p>
+      <div id="contenedor-procedimiento"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
